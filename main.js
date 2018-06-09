@@ -12,6 +12,8 @@ const musicData = [
     { artist: 'Justin Bieber', name: 'Purpose', sales: 554000 }
 ];
 
-// your code goes here
+const albumSalesStrings = musicData.map(function (obj) {
+    return obj.name + ' by ' + obj.artist + ' sold ' + obj.sales + ' copies'    
+});
 
 console.log(albumSalesStrings);
