@@ -1,19 +1,25 @@
-const musicData = [
-    { artist: 'Adele', name: '25', sales: 1731000 },
-    { artist: 'Drake', name: 'Views', sales: 1608000 },
-    { artist: 'Beyonce', name: 'Lemonade', sales: 1554000 },
-    { artist: 'Chris Stapleton', name: 'Traveller', sales: 1085000 },
-    { artist: 'Pentatonix', name: 'A Pentatonix Christmas', sales: 904000 },
-    { artist: 'Original Broadway Cast Recording', 
-      name: 'Hamilton: An American Musical', sales: 820000 },
-    { artist: 'Twenty One Pilots', name: 'Blurryface', sales: 738000 },
-    { artist: 'Prince', name: 'The Very Best of Prince', sales: 668000 },
-    { artist: 'Rihanna', name: 'Anti', sales: 603000 },
-    { artist: 'Justin Bieber', name: 'Purpose', sales: 554000 }
-];
+let array = ['hello', 'world']
 
-const albumSalesStrings = musicData.map(function (obj) {
-    return obj.name + ' by ' + obj.artist + ' sold ' + obj.sales + ' copies'    
-});
+console.log(
+  array.map( x => x ),
+  array.map( (x) => (x) ),
+  array.map( x => (x + ' third console') ),
+  array.map( x => { return x } ),
+  array.map( (x, index) => (index) ),
+  array.map( (x, index) => ( index === 0 ? x+array[index+1] : x ) )
+)
 
-console.log(albumSalesStrings);
+
+let arr = []
+for(let i = 0; i < array.length; i++) {
+  arr.push(array[i] === 0 ? array[i] + array[i + 1] : array[i])
+}
+
+console.log(arr + ' from for loop output')
+var i = 0;
+while( i < array.length ) {
+  console.log(array[i] + ' from while loop output');
+  i++;
+}
+
+// ['helloworld', 'world']
